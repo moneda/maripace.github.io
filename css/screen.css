@@ -59,6 +59,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /*------------------------
+VARIABLES
+--------------------------*/
+/*------------------------
 CSS BASE
 --------------------------*/
 html {
@@ -142,11 +145,20 @@ section h1 {
   position: absolute;
   top: 72px;
   width: 198px;
+  z-index: 1;
 }
 
 .navigation {
   position: absolute;
   top: 26px;
+}
+.navigation > ul {
+  display: none;
+}
+@media screen and (min-width: 680px) {
+  .navigation > ul {
+    display: block !important;
+  }
 }
 .navigation li {
   border-bottom: 3px solid #08b7b8;
@@ -162,11 +174,87 @@ section h1 {
 .navigation li a {
   color: #5f5f5f;
 }
+.navigation li a:hover {
+  color: #08b7b8;
+  transition: none;
+}
 .navigation .info {
   border-color: #a8cd45;
 }
+.navigation .info a:hover {
+  color: #96ba37;
+  transition: none;
+}
+.navigation .info:hover .submenu {
+  height: 158px;
+}
+.navigation .info .submenu {
+  margin-top: 13px;
+  position: absolute;
+  z-index: 1;
+  background-color: #5f5f5f;
+  border-radius: 0 0 5px 5px;
+  width: 190px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s linear;
+}
+.navigation .info .submenu li {
+  border-bottom: 1px solid #464646;
+  border-top: 1px solid #787878;
+  font-size: 0.9em;
+  padding: 10px;
+  text-shadow: none;
+  width: 154px;
+}
+.navigation .info .submenu li a {
+  color: #fff;
+}
+.navigation .info .submenu li a:hover {
+  color: #a8cd45;
+}
 .navigation .contacto {
   border-color: #b878b1;
+}
+.navigation .contacto a:hover {
+  color: #b878b1;
+  transition: none;
+}
+
+/*------------------------
+ MOBILE MENU
+--------------------------*/
+.mobile-menu {
+  margin-bottom: 13px;
+  margin-top: -47px;
+  position: relative;
+}
+@media screen and (min-width: 680px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+.rmm {
+  max-width: 650px !important;
+}
+
+.rmm.graphite .rmm-toggled-title {
+  text-align: right;
+  padding-right: 62px;
+  text-shadow: 1px 1px 1px white;
+  color: #5f5f5f;
+  font-weight: bold;
+}
+.rmm.graphite .rmm-toggled {
+  background: none;
+}
+.rmm.graphite .rmm-toggled-controls {
+  padding-bottom: 11px;
+}
+.rmm.graphite .rmm-button span {
+  background: #5f5f5f;
+  border-bottom: 1px solid #fff;
 }
 
 /*------------------------
@@ -176,7 +264,7 @@ section .page_container {
   margin: 0 auto;
   max-width: 1280px;
   position: relative;
-  top: 25%;
+  top: 15%;
   width: 80%;
   z-index: 3;
 }
@@ -190,18 +278,37 @@ section .page_container .info_container h1 {
   font-family: "pacifico";
   text-align: left;
 }
+@media screen and (max-width: 640px) {
+  section .page_container .info_container h1 {
+    font-size: 2.2em;
+    text-align: center;
+  }
+}
 section .page_container .info_container .edad {
   font-weight: 300;
   margin-bottom: 12px;
 }
+@media screen and (max-width: 640px) {
+  section .page_container .info_container .edad {
+    font-size: 0.9em;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
 section .page_container .info_container .info-etapa {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 21px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 640px) {
+  section .page_container .info_container .info-etapa {
+    font-size: 0.9em;
+  }
 }
 section .page_container .sec-img {
   float: left;
   width: 40%;
+  margin-top: 25px;
 }
 section .page_container .info_container.left {
   float: left;
@@ -209,6 +316,25 @@ section .page_container .info_container.left {
 }
 section .page_container .sec-img.right {
   float: right;
+}
+@media screen and (max-width: 640px) {
+  section .page_container .sec-img.right {
+    float: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  section .page_container {
+    top: 5%;
+  }
+  section .page_container .sec-img {
+    width: 50%;
+    float: none;
+    margin: auto;
+  }
+  section .page_container .info_container {
+    width: 94%;
+    float: none;
+  }
 }
 
 .sec-btns a {
@@ -223,7 +349,13 @@ section .page_container .sec-img.right {
 .section-back {
   height: 50%;
   position: relative;
-  top: 25%;
+  top: 18%;
+}
+@media screen and (max-width: 640px) {
+  .section-back {
+    height: 80%;
+    top: 3%;
+  }
 }
 
 /*------------------------
@@ -241,6 +373,12 @@ SECCION 1
   padding: 0;
   text-align: left;
   letter-spacing: 0.2px;
+}
+@media screen and (max-width: 640px) {
+  .main section.page1 h1 {
+    font-size: 2.2em;
+    text-align: center;
+  }
 }
 .main section.page1 .info_container .tren {
   height: auto;
@@ -268,7 +406,7 @@ SECCION 2
 --------------------------*/
 section.page2 {
   background-color: #fff;
-  margin-top: -15%;
+  margin-top: -17%;
   transition: margin-top 1s linear;
 }
 section.page2 .section-back {
@@ -300,6 +438,12 @@ section.page3 img {
   width: 100%;
   height: auto;
 }
+section.page3 .sec-btns {
+  a: #F6923D;
+}
+section.page3 .sec-btns a {
+  background: #F6923D;
+}
 
 /*------------------------
 SECCION 4
@@ -324,6 +468,16 @@ section.page4 .sec-btns a {
 
 section.page4.section.active {
   margin-top: -0%;
+}
+
+/*------------------------
+SECCION 4
+--------------------------*/
+section.page5 h1 {
+  color: #5f5f5f;
+}
+section.page5 img {
+  max-width: 100%;
 }
 
 /*------------------------
@@ -558,19 +712,10 @@ code.js {
 }
 
 .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  background: #e0e1e1;
-  font-weight: bold;
+  background: none repeat scroll 0 0 #e0e1e1;
   font-size: 13px;
-  color: #000;
+  transition: all 500ms ease-in-out 0s;
+  width: 100%;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
@@ -622,6 +767,16 @@ header {
 .viewing-page-2 .back #header .navigation a,
 .viewing-page-4 .back #header .navigation a {
   color: #fff;
+}
+.viewing-page-2 .rmm.graphite .rmm-toggled-title,
+.viewing-page-4 .rmm.graphite .rmm-toggled-title {
+  color: #fff;
+  text-shadow: 1px 1px 1px #5f5f5f;
+}
+.viewing-page-2 .rmm.graphite .rmm-button span,
+.viewing-page-4 .rmm.graphite .rmm-button span {
+  background: #fff;
+  border-bottom: 1px solid #5f5f5f;
 }
 
 .main section.page3 h2 {
@@ -685,4 +840,4 @@ section.page5 {
   background: #fff;
 }
 
-/*------ section 1 -------*/
+/*------ Respondive breakpoint -------*/
