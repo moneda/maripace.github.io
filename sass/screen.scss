@@ -15,6 +15,12 @@ $susy: (
 );
 
 /*------------------------
+VARIABLES
+--------------------------*/
+$mobile-breack: 680px;
+$small-breack: 640px;
+
+/*------------------------
 CSS BASE
 --------------------------*/
 html {
@@ -97,9 +103,17 @@ section h1 {
     position: absolute;
     top: 72px;
     width: 198px;
+    z-index: 1;
   }
  }
 .navigation{
+  > ul{display: none;
+
+     @media screen and (min-width: $mobile-breack) {
+    display: block !important;
+  }
+
+  }
   position: absolute;
   top: 26px;
   li{
@@ -113,14 +127,84 @@ section h1 {
     width: 124px;
     margin-right: -3px;
 
-    a{color: rgb(95, 95, 95);}
+    a{color: rgb(95, 95, 95); &:hover{color: rgb(8, 183, 184); transition: none;}}
   }
-  .info{ border-color: #a8cd45;}
-  .contacto{ border-color: #b878b1;}
+  .info{ 
+    a:hover{ color:#96ba37; transition: none;}
+
+    border-color: #a8cd45;
+    
+    &:hover{
+      .submenu{ 
+      height: 158px;
+      }
+    }
+    .submenu{ 
+      margin-top: 13px;
+      position: absolute;  
+      z-index: 1;
+      background-color: rgb(95, 95, 95);
+      border-radius: 0 0 5px 5px;
+      width: 190px;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s linear;
+      li{
+        border-bottom: 1px solid rgb(70, 70, 70);
+        border-top: 1px solid rgb(120, 120, 120);
+        font-size: 0.9em;
+        padding: 10px;
+        text-shadow: none;
+        width: 154px;
+        a{color: #fff; 
+          &:hover{ color: #a8cd45;}
+        }
+      }
+    }
+  }
+  .contacto{ 
+    border-color: #b878b1;
+    a:hover{
+      color: rgb(184, 120, 177);
+      transition: none;
+    }
+
+  }
+
 
 }
+/*------------------------
+ MOBILE MENU
+--------------------------*/
+.mobile-menu{
+  margin-bottom: 13px;
+  margin-top: -47px;
+  position: relative;
 
+   @media screen and (min-width: $mobile-breack) {
+    display: none !important;
+  }
+}
 
+.rmm{
+  max-width: 650px !important;
+}
+.rmm.graphite{ 
+  .rmm-toggled-title{
+    text-align: right;
+    padding-right: 62px;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+  }
+  .rmm-toggled{
+  background: none;
+  }
+  .rmm-toggled-controls{
+  padding-bottom: 11px;
+  }
+  .rmm-button span{ background: rgb(95, 95, 95); border-bottom: 1px solid #fff;}
+}
 /*------------------------
  SECTION CSS GENERAL
 --------------------------*/
@@ -128,7 +212,7 @@ section .page_container {
       margin: 0 auto;
       max-width: 1280px;
       position: relative;
-      top: 25%;
+      top: 15%;
       width: 80%;
       z-index: 3;
 
@@ -140,20 +224,34 @@ section .page_container {
       h1{
         font-family: "pacifico";
         text-align: left;
+        @media screen and (max-width: $small-breack) {
+          font-size: 2.2em;
+          text-align: center;
+        }
+
       }
       .edad{
         font-weight: 300;
         margin-bottom: 12px;
+        @media screen and (max-width: $small-breack) {
+          font-size: 0.9em;
+          margin-bottom: 0;
+          text-align: center;
+        }
       }
       .info-etapa{
-        font-size: 16px;
+        font-size: 1em;
         line-height: 21px;
         margin-bottom: 30px;
+        @media screen and (max-width: $small-breack) {
+          font-size: 0.9em;
+        }
       }
     }
     .sec-img{
       float: left;
       width: 40%;
+      margin-top: 25px;
     }
 
     .info_container.left{
@@ -162,7 +260,16 @@ section .page_container {
     }
     .sec-img.right{
       float: right;
+      @media screen and (max-width: $small-breack) {
+        float: none;
+      }
     }
+
+  @media screen and (max-width: $small-breack) {
+    top: 5%;
+    .sec-img{ width: 50%; float: none; margin: auto;}
+    .info_container { width: 94%; float: none;}
+  }
 }
 
 .sec-btns {
@@ -179,7 +286,12 @@ section .page_container {
 .section-back {
     height: 50%;
     position: relative;
-    top: 25%;
+    top: 18%;
+
+    @media screen and (max-width: $small-breack) {
+        height: 80%;
+        top: 3%;
+      }
 }
 
 /*------------------------
@@ -199,6 +311,12 @@ SECCION 1
       padding: 0;
       text-align: left;
       letter-spacing: 0.2px;
+
+      @media screen and (max-width: $small-breack) {
+        font-size: 2.2em;
+        text-align: center;
+      }
+
     }
 
     .info_container {
@@ -237,7 +355,7 @@ SECCION 2
 --------------------------*/
 section.page2 {
   background-color: #fff;
-  margin-top: -15%;
+  margin-top: -17%;
   transition: margin-top 1s linear;
     .section-back{
       background-image: url("../images/white-pattern.png"), url("../images/blue-pattern-short.png") ;
@@ -270,6 +388,12 @@ section.page3{
         width: 100%;
         height: auto;
     }
+  .sec-btns{
+    a: #F6923D;
+  }
+  .sec-btns a{
+    background: #F6923D;
+  }
 }
 
 
@@ -287,6 +411,7 @@ section.page4 {
       background-repeat: repeat-x;
       background-position: 0 bottom, 0 top;
       background-color:#96b938;
+
     }
       img{
         width: 100%;
@@ -301,6 +426,18 @@ section.page4 {
 section.page4.section.active{
     margin-top: -0%;
   }
+
+/*------------------------
+SECCION 4
+--------------------------*/ 
+section.page5{
+  h1{ color: rgb(95, 95, 95); }
+  img{
+    max-width: 100%;
+  }
+}
+
+
 
 /*------------------------
 FOOTER
@@ -536,19 +673,10 @@ FOOTER
     }
     
     .back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      background: rgb(224, 225, 225);
-      font-weight: bold;
+      background: none repeat scroll 0 0 rgb(224, 225, 225);
       font-size: 13px;
-      color: #000;
+      transition: all 500ms ease-in-out 0s;
+      width: 100%;
       -webkit-transition: all 500ms ease-in-out;
       -moz-transition: all 500ms ease-in-out;
       -o-transition: all 500ms ease-in-out;
@@ -583,19 +711,32 @@ FOOTER
       line-height: 160%;
       font-weight: 100;
     }
-    .viewing-page-2 .back,
-    .viewing-page-4 .back{
-      background: rgba(0, 0, 0, 0.35);
-      color: #FFF;
-       #header{
-        .navigation{
-          li{
-            text-shadow: 0.5px 0.866px 0 rgb(100, 100, 100);
+    .viewing-page-2,
+    .viewing-page-4{
+      .back{
+          background: rgba(0, 0, 0, 0.35);
+          color: #FFF;
+          #header{
+          .navigation{
+             li{
+                text-shadow: 0.5px 0.866px 0 rgb(100, 100, 100);
+              }
+              a{ color: #fff;}
           }
-          a{ color: #fff;}
         }
-       }
       }
+      .rmm.graphite{ 
+        .rmm-toggled-title {
+          color: #fff;
+          text-shadow: 1px 1px 1px rgb(95, 95, 95);
+        }
+        .rmm-button span{
+          background: #fff;
+          border-bottom: 1px solid rgb(95, 95, 95);
+        }
+      }
+    }
+
 
     .main section.page3 h2 {
       color: rgba(0,0,0,0.85);
@@ -659,4 +800,5 @@ FOOTER
       background: #fff;
     }
 
-    /*------ section 1 -------*/
+    /*------ Respondive breakpoint -------*/
+

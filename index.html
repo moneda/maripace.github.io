@@ -14,7 +14,15 @@
 	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
 	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
-  <script type="text/javascript" src="js/jquery.js"></script>
+
+  <!-- Mobile menu libraries -->
+  <link href="css/responsivemobilemenu.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="js/responsivemobilemenu.js"></script>
+  
+
+
+  <!--<script type="text/javascript" src="js/jquery.js"></script>--><!-- A comenatar este js, funciono el menu mobil, sin afectar a nada más, ¿por qué? --que clase de magia es esta?... no lo se-->
   <script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
   <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
   <link href='css/screen.css' rel='stylesheet' type='text/css'>
@@ -32,6 +40,57 @@
 	</script>
 </head>
 <body>
+
+   <!--****************************
+       MENU 
+      ********************************-->
+  <div class="back">
+      <div id="header">
+        <div class="brand">Castle Kids
+          <div class="subtext">GUARDERÍA</div>
+          <div class="brand-label"></div>
+        </div>
+        <div class="navigation">
+          <ul>
+            <li class="inicio"><a href="#">Inicio</a></li>
+            <li class="info"><a href="#">Información</a>
+                <ul class= "submenu">
+                  <li><a href="#">Conocenos</a></li>
+                  <li><a href="#">Lactantes 1</a></li>
+                  <li><a href="#">Lacatantes 2</a></li>
+                  <li><a href="#">Maternal</a></li>
+                </ul>
+            </li>
+            <li class="contacto"><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+     <!--****************************
+        MENU MOBILE
+      ********************************-->
+  <div class="mobile-menu">
+    <div class="rmm">
+        <ul>
+            <li class="inicio"><a href="#">Inicio</a></li>
+            <li class="inicio"><a href="#">Conocenos</a></li>
+            <li class="inicio"><a href="#">Lactantes 1</a></li>
+            <li class="inicio"><a href="#">Lacatantes 2</a></li>
+            <li class="inicio"><a href="#">Maternal</a></li>
+            <li class="contacto"><a href="#">Contacto</a></li>
+       </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+     <!--****************************
+        CONTENT
+      ********************************-->
   <div class="wrapper">
 	  <div class="main">
 
@@ -149,13 +208,11 @@
           </div>
           <div class="info_container">
             <h1> Contáctanos </h1>
-              <div class="edad">(de 1 a 2 años)</div>
               <div class="info-etapa">
-                Es la etapa donde se desarrollan las habilidades comunicativas y físicas como la resistencia y la velocidad, el fomento de hábitos posturales y de higiene, así como la formación de rasgos de carácter, iniciativa, disposición, cooperación y socialización, aspectos importantes para la formación integral del niño.
+                Es la etapa donde se desarrollan las habilidades comunicativas y físicas como la resistencia y la velocidad, el fomento de hábitos posturales y de higiene, así como la formación de rasgos de carácter, iniciativa, disposición.
               </div>
               <div class="lact1 sec-btns">
-                <a href="#">Leer más</a>
-                <a href="#">Preincripción</a>
+                <a href="#">Enviar correo</a>
               </div>
           </div>
           
@@ -200,20 +257,6 @@
 
 
     </div>
-    <div class="back">
-      <div id="header">
-        <div class="brand">Castle Kids
-          <div class="subtext">GUARDERÍA</div>
-          <div class="brand-label"></div>
-        </div>
-        <div class="navigation">
-          <ul>
-            <li class="inicio"><a href="#">Inicio</a></li>
-            <li class="info"><a href="#">Información</a></li>
-            <li class="contacto"><a href="#">Contacto</a></li>
-          </ul>
-          </div>
-        </div>
-    </div>
+    
 </body>
 </html>
