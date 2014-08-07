@@ -189,19 +189,18 @@ section h1 {
   height: 158px;
 }
 .navigation .info .submenu {
-  margin-top: 13px;
-  position: absolute;
-  z-index: 1;
-  background-color: #5f5f5f;
+  background-color: rgba(0, 0, 0, 0.45);
   border-radius: 0 0 5px 5px;
-  width: 190px;
   height: 0;
+  margin-top: 13px;
   overflow: hidden;
-  transition: height 0.3s linear;
+  position: absolute;
+  transition: height 0.3s linear 0s;
+  width: 190px;
+  z-index: 4;
 }
 .navigation .info .submenu li {
-  border-bottom: 1px solid #464646;
-  border-top: 1px solid #787878;
+  border-bottom: 1px solid #787878;
   font-size: 0.9em;
   padding: 10px;
   text-shadow: none;
@@ -211,7 +210,7 @@ section h1 {
   color: #fff;
 }
 .navigation .info .submenu li a:hover {
-  color: #a8cd45;
+  color: #bdeb43;
 }
 .navigation .contacto {
   border-color: #b878b1;
@@ -278,7 +277,7 @@ section .page_container .info_container h1 {
   font-family: "pacifico";
   text-align: left;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   section .page_container .info_container h1 {
     font-size: 2.2em;
     text-align: center;
@@ -288,7 +287,7 @@ section .page_container .info_container .edad {
   font-weight: 300;
   margin-bottom: 12px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   section .page_container .info_container .edad {
     font-size: 0.9em;
     margin-bottom: 0;
@@ -300,7 +299,7 @@ section .page_container .info_container .info-etapa {
   line-height: 21px;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   section .page_container .info_container .info-etapa {
     font-size: 0.9em;
   }
@@ -317,12 +316,12 @@ section .page_container .info_container.left {
 section .page_container .sec-img.right {
   float: right;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   section .page_container .sec-img.right {
     float: none;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   section .page_container {
     top: 5%;
   }
@@ -351,7 +350,7 @@ section .page_container .sec-img.right {
   position: relative;
   top: 18%;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   .section-back {
     height: 80%;
     top: 3%;
@@ -374,7 +373,7 @@ SECCION 1
   text-align: left;
   letter-spacing: 0.2px;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   .main section.page1 h1 {
     font-size: 2.2em;
     text-align: center;
@@ -439,10 +438,10 @@ section.page3 img {
   height: auto;
 }
 section.page3 .sec-btns {
-  a: #F6923D;
+  a: #FF9531;
 }
 section.page3 .sec-btns a {
-  background: #F6923D;
+  background: #FF9531;
 }
 
 /*------------------------
@@ -462,22 +461,32 @@ section.page4 img {
   width: 100%;
   height: auto;
 }
-section.page4 .sec-btns a {
-  background: none repeat scroll 0 0 #fdcb50;
-}
 
 section.page4.section.active {
   margin-top: -0%;
 }
 
 /*------------------------
-SECCION 4
+SECCION 5
 --------------------------*/
 section.page5 h1 {
   color: #5f5f5f;
 }
-section.page5 img {
-  max-width: 100%;
+section.page5 .textbox {
+  background: white;
+  border: 1px solid #DDD;
+  box-shadow: 0 0 5px #DDD inset;
+  color: #666;
+  height: 25px;
+  width: 275px;
+  padding: 3px 10px;
+}
+section.page5 .textbox:focus {
+  outline: 1px solid #08b7b8;
+}
+section.page5 .mensaje {
+  height: 130px;
+  margin-bottom: 20px;
 }
 
 /*------------------------
@@ -488,8 +497,19 @@ FOOTER
   border-top: 1px solid #d2d2d2;
   padding-top: 20px;
 }
+@media screen and (max-width: 680px) {
+  .footer.page_container {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
 .footer.page_container .sec-img {
-  width: 50%;
+  width: 60%;
+}
+@media screen and (max-width: 680px) {
+  .footer.page_container .sec-img {
+    width: 100%;
+  }
 }
 .footer.page_container img {
   margin-bottom: 8px;
@@ -513,6 +533,9 @@ FOOTER
 .footer.page_container .social .twuit:hover {
   background-position: 0 -18px;
 }
+.footer.page_container .contact-btns {
+  width: 40%;
+}
 .footer.page_container .contact-btns div {
   float: right;
   margin-top: 50px;
@@ -521,11 +544,12 @@ FOOTER
   border-radius: 10px;
   box-shadow: 0.5px 0.866px 3px 0 #789696;
   color: white;
+  display: inline-block;
   margin-right: 10px;
-  padding: 3px 19px;
+  padding: 7px 19px;
 }
 .footer.page_container .contact-btns .contac {
-  background: #f59436;
+  background: #FF9531;
 }
 .footer.page_container .contact-btns .pre {
   background: #08b7b8;
@@ -767,6 +791,35 @@ header {
 .viewing-page-2 .back #header .navigation a,
 .viewing-page-4 .back #header .navigation a {
   color: #fff;
+}
+.viewing-page-2 .back #header .navigation .inicio a:hover,
+.viewing-page-4 .back #header .navigation .inicio a:hover {
+  color: #73f2f3;
+}
+.viewing-page-2 .back #header .navigation .info a:hover,
+.viewing-page-4 .back #header .navigation .info a:hover {
+  color: #bdeb43;
+}
+.viewing-page-2 .back #header .navigation .info ul,
+.viewing-page-4 .back #header .navigation .info ul {
+  background: rgba(224, 225, 225, 0.8);
+}
+.viewing-page-2 .back #header .navigation .info ul li,
+.viewing-page-4 .back #header .navigation .info ul li {
+  border-bottom: 1px solid #c8c8c8;
+}
+.viewing-page-2 .back #header .navigation .info ul li a,
+.viewing-page-4 .back #header .navigation .info ul li a {
+  color: #5f5f5f;
+  text-shadow: 0.5px 0.866px 0 #fafafa;
+}
+.viewing-page-2 .back #header .navigation .info ul li a:hover,
+.viewing-page-4 .back #header .navigation .info ul li a:hover {
+  color: #96ba37;
+}
+.viewing-page-2 .back #header .navigation .contacto a:hover,
+.viewing-page-4 .back #header .navigation .contacto a:hover {
+  color: #f6b8ef;
 }
 .viewing-page-2 .rmm.graphite .rmm-toggled-title,
 .viewing-page-4 .rmm.graphite .rmm-toggled-title {
