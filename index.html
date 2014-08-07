@@ -13,19 +13,19 @@
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
-	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
 
   <!-- Mobile menu libraries -->
   <link href="css/responsivemobilemenu.css" rel="stylesheet" type="text/css"/>
   <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
   <script type="text/javascript" src="js/responsivemobilemenu.js"></script>
   
-
-
-  <!--<script type="text/javascript" src="js/jquery.js"></script>--><!-- A comenatar este js, funciono el menu mobil, sin afectar a nada más, ¿por qué? --que clase de magia es esta?... no lo se-->
   <script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
+  <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
   <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
   <link href='css/screen.css' rel='stylesheet' type='text/css'>
+
   <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <style> </style>
 	<script>
@@ -107,14 +107,14 @@
           </div>
           <div class="info_container">
             <h1>Castle Kids</h1>
-            <p>Somos un equipo de profesttles, con un nuevo proyecto educativo que responde a las necesidades actuales, donde nuestro objetivo es formar niños integrales, en base al desarrollo de:</p>
+            <p>Somos un equipo de profesionales, con un nuevo proyecto educativo que responde a las necesidades actuales, donde nuestro objetivo es formar niños con una educación integral, con base al modelo por competencias, que los llevará a ser individuos seguros, honestos y felices.
+            <br><br>
+            <span>Tu bebé desarollará al máximo sus</span></p>
+            <div id="competencias"> 
+              <span>Conocimientos</span>, <span>Habilidades</span> y <span>Actitudes</span>
+            </div>
             <img src="images/tren.jpg" alt="tren" class="tren"/>
           </div>
-        <!--
-          <div class="btns">
-  	        <a class="reload btn" href="https://github.com/peachananr/onepage-scroll">Download on Github</a>
-  	      </div> 
-        -->
   	    </div>
       </section>
 
@@ -133,7 +133,7 @@
                 <h1> lactantes 1 </h1>
                 <div class="edad">(6 mese a 1 año)</div>
                 <div class="info-etapa">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Es la esta etapa donde se desarrollan las habilidades motrices, por lo cual se proporciona estimulación cognoscitiva y afectiva para incrementar la comunicación entre el cerebro y el cuerpo.
                 </div>
                 <div class="lact1 sec-btns">
                   <a href="#">Leer más</a>
@@ -157,7 +157,7 @@
             <h1> lactantes 2 </h1>
               <div class="edad">(de 1 a 2 años)</div>
               <div class="info-etapa">
-                Es la etapa donde se desarrollan las habilidades comunicativas y físicas como la resistencia y la velocidad, el fomento de hábitos posturales y de higiene, así como la formación de rasgos de carácter, iniciativa, disposición, cooperación y socialización, aspectos importantes para la formación integral del niño.
+                Etapa en la cual se desarrollan las habilidades comunicativas y físicas como la resistencia y la velocidad, el fomento de hábitos  posturales y de higiene, así como la formación de rasgos de carácter, iniciativa, disposición, cooperación y socialización, aspectos importantes para la formación integral del niño.
               </div>
               <div class="lact1 sec-btns">
                 <a href="#">Leer más</a>
@@ -186,7 +186,7 @@
                 <h1>Maternal</h1>
                 <div class="edad">(de 2 a 3 años)</div>
                 <div class="info-etapa">
-                  Es  la  etapa donde se desarrollan primordialmente las habilidades  intelectuales, de lenguaje y personalidad fomentando individuos seguros y  autosuficientes para enfrentar cualquier situación real.
+                  Aquí se desarrollan primordialmente las habilidades intelectuales, de lenguaje y personalidad; el fomento a ser niñ@s seguros y autosuficientes para enfrentar cualquier situación real.
                 </div>
                 <div class="lact1 sec-btns">
                   <a href="#">Leer más</a>
@@ -209,10 +209,14 @@
           <div class="info_container">
             <h1> Contáctanos </h1>
               <div class="info-etapa">
-                Es la etapa donde se desarrollan las habilidades comunicativas y físicas como la resistencia y la velocidad, el fomento de hábitos posturales y de higiene, así como la formación de rasgos de carácter, iniciativa, disposición.
+                <p>Nos ponemos a tu dispósición en</p>
+                <p>E-mail: contacto@castlekids.info</p>
+                <p>Móvil:  22·22·52·70·43 <span>+ WhatsApp</span></p>
+                <p>Dirección: 9 Poniente 1904 Col. La paz.</p>
               </div>
               <div class="lact1 sec-btns">
                 <a href="#">Enviar correo</a>
+                <a href="https://docs.google.com/forms/d/1uwo8mlejuTKA78e0xh5Rejf3HloWtxoVvsrLQ6b8n6w/viewform?embedded=true" class="pre">Pre-inscripción</a>
               </div>
           </div>
           
@@ -220,33 +224,25 @@
           <div class="sec-img">
             <img src="images/footer-castle.png" alt="Castle Kids" >
             <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
                 <li><a href="#">Conócenos</a></li>
                 <li><a href="#">Lactantes 1</a></li>
                 <li><a href="#">Lactantes 2</a></li>
                 <li><a href="#">Maternal</a></li>
-                <li><a href="#">Pre-registro</a></li>
+                <li><a href="">Pre-registro</a></li>
             </ul> 
             <div class="footer-menu legal">
               <ul class="legal-menu">
                 <li><a href="#">Aviso de Privacidad</a></li>
-                <li><a href="#">Contacto</a></li>
               </ul>
               2014 Castle Kids Guardería
             </div>
-            <div class="social">
+            <div class="social" style="display:none;">
                 <a href="#">
                   <div class="boton twuit"></div>
                 </a>
                 <a href="#">
                   <div class="boton face"></div>
                 </a>
-            </div>
-          </div>
-          <div class="info_container contact-btns">
-            <div>
-              <a href="" class="contac">Contácto</a>
-              <a href="" class="pre">Pre-inscripción</a>
             </div>
           </div>
         </div>
@@ -256,6 +252,10 @@
 
 
 
+    </div>
+
+    <div style="display:none;">
+      <iframe id="preform" src="https://docs.google.com/forms/d/1uwo8mlejuTKA78e0xh5Rejf3HloWtxoVvsrLQ6b8n6w/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
     </div>
     
 </body>
