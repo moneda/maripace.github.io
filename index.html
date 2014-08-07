@@ -18,6 +18,7 @@
   <link href="css/responsivemobilemenu.css" rel="stylesheet" type="text/css"/>
   <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
   <script type="text/javascript" src="js/responsivemobilemenu.js"></script>
+
   
   <script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
   <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
@@ -33,6 +34,7 @@
       $(".main").onepage_scroll({
         sectionContainer: "section",
         responsiveFallback: false,
+        updateURL: true,
         loop: true
       });
 		});
@@ -52,16 +54,16 @@
         </div>
         <div class="navigation">
           <ul>
-            <li class="inicio"><a href="#">Inicio</a></li>
-            <li class="info"><a href="#">Información</a>
+            <li class="inicio"><a href="#1">Inicio</a></li>
+            <li class="info"><a href="#2">Información</a>
                 <ul class= "submenu">
                   <li><a href="#">Conocenos</a></li>
-                  <li><a href="#">Lactantes 1</a></li>
-                  <li><a href="#">Lacatantes 2</a></li>
-                  <li><a href="#">Maternal</a></li>
+                  <li><a href="#2" target="_self">Lactantes 1</a></li>
+                  <li><a href="#3">Lacatantes 2</a></li>
+                  <li><a href="#4">Maternal</a></li>
                 </ul>
             </li>
-            <li class="contacto"><a href="#">Contacto</a></li>
+            <li class="contacto"><a href="#5">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -108,7 +110,7 @@
           <div class="info_container">
             <h1>Castle Kids</h1>
             <p>Somos un equipo de profesionales, con un nuevo proyecto educativo que responde a las necesidades actuales, donde nuestro objetivo es formar niños con una educación integral, con base al modelo por competencias, que los llevará a ser individuos seguros, honestos y felices.
-            <br><br>
+            <br>
             <span>Tu bebé desarollará al máximo sus</span></p>
             <div id="competencias"> 
               <span>Conocimientos</span>, <span>Habilidades</span> y <span>Actitudes</span>
@@ -148,7 +150,7 @@
         SECCION 3
       ********************************-->
       
-      <section class="page3">
+      <section id="lact2" class="page3">
         <div class="page_container">
           <div class="sec-img">
             <img src="images/bb-lac2.png" alt="Castle Kids" >
@@ -215,7 +217,7 @@
                 <p>Dirección: 9 Poniente 1904 Col. La paz.</p>
               </div>
               <div class="lact1 sec-btns">
-                <a href="#">Enviar correo</a>
+                <a href="https://docs.google.com/forms/d/1yhVWUUawtrO4Zn6ihK0b_9YUkNX2weL-0e9XZNJXygg/viewform?embedded=true" class="contacto">Enviar correo</a>
                 <a href="https://docs.google.com/forms/d/1uwo8mlejuTKA78e0xh5Rejf3HloWtxoVvsrLQ6b8n6w/viewform?embedded=true" class="pre">Pre-inscripción</a>
               </div>
           </div>
@@ -250,12 +252,6 @@
         </div>
       </section>
 
-
-
-    </div>
-
-    <div style="display:none;">
-      <iframe id="preform" src="https://docs.google.com/forms/d/1uwo8mlejuTKA78e0xh5Rejf3HloWtxoVvsrLQ6b8n6w/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
     </div>
     
 </body>
