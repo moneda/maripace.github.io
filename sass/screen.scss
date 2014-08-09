@@ -67,6 +67,47 @@ section h1 {
     margin: 0 0 10px;
     text-align: left;
 }
+
+/*------------------------
+PLECA DE COLOR
+-------------------------*/
+
+.section-back-exp{
+    height: 320px;
+    position: absolute;
+    width: 100%;
+    transition: all 1s linear;
+    background-image: url("../images/white-pattern-top.png"), url("../images/white-pattern-bottom.png") ;
+    background-repeat: repeat-x;
+    background-position: 0 top, 0 bottom;
+}
+.viewing-page-1 .section-back-exp,
+.viewing-page-3 .section-back-exp{
+  margin-bottom: -280px;
+  bottom: 0;
+}
+.viewing-page-2 .section-back-exp,
+.viewing-page-4 .section-back-exp{
+  margin-bottom: -160px;
+  bottom: 50%;
+}
+
+
+.viewing-page-1 .section-back-exp,
+.viewing-page-2 .section-back-exp{
+  background-color: #6cbdda;
+}
+
+.viewing-page-3 .section-back-exp,
+.viewing-page-4 .section-back-exp{
+  background-color: #96b938;;
+}
+
+.viewing-page-5 .section-back-exp{
+  background: none;
+}
+
+
 /*------------------------
  MENU
 --------------------------*/
@@ -206,11 +247,14 @@ section h1 {
 /*------------------------
  SECTION CSS GENERAL
 --------------------------*/
+
+.wrapper{max-width: 1280px;}
+
 section .page_container {
       margin: 0 auto;
       max-width: 1280px;
       position: relative;
-      top: 5%;
+      top: 10%;
       width: 80%;
       z-index: 3;
       @media screen and (max-width: $text-break){
@@ -307,7 +351,6 @@ SECCION 1
 --------------------------*/
 
 .main section.page1 {
-      background: #fff;
 
 
     h1 {
@@ -380,14 +423,13 @@ SECCION 1
 SECCION 2
 --------------------------*/
 section.page2 {
-  background-color: #fff;
   margin-top: -15%;
   transition: margin-top 1s linear;
     .section-back{
-      background-image: url("../images/white-pattern.png"), url("../images/blue-pattern-short.png") ;
+      /*background-image: url("../images/white-pattern.png"), url("../images/blue-pattern-short.png") ;
       background-repeat: repeat-x;
       background-position: 0 bottom, 0 top;
-      background-color:#6cbdda;
+      background-color:#6cbdda;*/
     }
     img{
       width: 100%;
@@ -434,10 +476,10 @@ section.page4 {
     margin-top: -15%;
     transition: margin-top 1s linear;
       .section-back{
-      background-image: url("../images/white-pattern.png"), url("../images/green-pattern-short.png") ;
+      /*background-image: url("../images/white-pattern.png"), url("../images/green-pattern-short.png") ;
       background-repeat: repeat-x;
       background-position: 0 bottom, 0 top;
-      background-color:#96b938;
+      background-color:#96b938;*/
 
     }
       img{
