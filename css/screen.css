@@ -111,42 +111,43 @@ section h1 {
 
 /*------------------------
 PLECA DE COLOR
--------------------------*/
-.section-back-exp {
-  height: 320px;
-  position: absolute;
-  width: 100%;
-  transition: all 1s linear;
-  background-image: url("../images/white-pattern-top.png"), url("../images/white-pattern-bottom.png");
-  background-repeat: repeat-x;
-  background-position: 0 top, 0 bottom;
-}
+-------------------------
 
+.section-back-exp{
+    height: 320px;
+    position: absolute;
+    width: 100%;
+    transition: all 1s linear;
+    background-image: url("../images/white-pattern-top.png"), url("../images/white-pattern-bottom.png") ;
+    background-repeat: repeat-x;
+    background-position: 0 top, 0 bottom;
+}
 .viewing-page-1 .section-back-exp,
-.viewing-page-3 .section-back-exp {
+.viewing-page-3 .section-back-exp{
   margin-bottom: -280px;
   bottom: 0;
 }
-
 .viewing-page-2 .section-back-exp,
-.viewing-page-4 .section-back-exp {
+.viewing-page-4 .section-back-exp{
   margin-bottom: -160px;
   bottom: 50%;
 }
 
+
 .viewing-page-1 .section-back-exp,
-.viewing-page-2 .section-back-exp {
+.viewing-page-2 .section-back-exp{
   background-color: #6cbdda;
 }
 
 .viewing-page-3 .section-back-exp,
-.viewing-page-4 .section-back-exp {
+.viewing-page-4 .section-back-exp{
   background-color: #96b938;
 }
 
-.viewing-page-5 .section-back-exp {
+.viewing-page-5 .section-back-exp{
   background: none;
 }
+
 
 /*------------------------
  MENU
@@ -259,6 +260,54 @@ PLECA DE COLOR
   transition: none;
 }
 
+.social {
+  float: right;
+  height: 60px;
+  width: 250px;
+}
+@media screen and (max-width: 870px) {
+  .social {
+    display: none !important;
+  }
+}
+
+.facebook,
+.twitter {
+  float: left;
+  height: 60px;
+  width: 50%;
+  overflow: hidden;
+}
+.facebook .cover,
+.twitter .cover {
+  transition: all 0.3s ease-in-out;
+  height: 60px;
+  position: absolute;
+  width: 125px;
+}
+.facebook:hover .cover,
+.twitter:hover .cover {
+  margin-top: -60px;
+}
+
+.facebook {
+  background-color: #637AAE;
+}
+.facebook .cover {
+  background: url("../images/facebook-icon.png") no-repeat scroll center #3971b6;
+}
+
+.twitter {
+  background-color: #a0d6e2;
+}
+.twitter .cover {
+  background: url("../images/twitter-icon.png") no-repeat scroll center #6cbdda;
+}
+.twitter iframe {
+  margin: 20px 0 0 10px;
+  width: 86px !important;
+}
+
 /*------------------------
  MOBILE MENU
 --------------------------*/
@@ -271,6 +320,14 @@ PLECA DE COLOR
   .mobile-menu {
     display: none !important;
   }
+}
+.mobile-menu li.twitt a {
+  margin-bottom: -28px;
+  color: transparent;
+  box-shadow: none;
+}
+.mobile-menu li.twitt iframe {
+  margin-top: -9px;
 }
 
 .rmm {
@@ -298,10 +355,6 @@ PLECA DE COLOR
 /*------------------------
  SECTION CSS GENERAL
 --------------------------*/
-.wrapper {
-  max-width: 1280px;
-}
-
 section .page_container {
   margin: 0 auto;
   max-width: 1280px;
@@ -492,10 +545,10 @@ section.page2 {
   transition: margin-top 1s linear;
 }
 section.page2 .section-back {
-  /*background-image: url("../images/white-pattern.png"), url("../images/blue-pattern-short.png") ;
+  background-image: url("../images/white-pattern-bottom.png"), url("../images/blue-pattern-short.png");
   background-repeat: repeat-x;
   background-position: 0 bottom, 0 top;
-  background-color:#6cbdda;*/
+  background-color: #6cbdda;
 }
 section.page2 img {
   width: 100%;
@@ -538,10 +591,10 @@ section.page4 {
   transition: margin-top 1s linear;
 }
 section.page4 .section-back {
-  /*background-image: url("../images/white-pattern.png"), url("../images/green-pattern-short.png") ;
+  background-image: url("../images/white-pattern-bottom.png"), url("../images/green-pattern-short.png");
   background-repeat: repeat-x;
   background-position: 0 bottom, 0 top;
-  background-color:#96b938;*/
+  background-color: #96b938;
 }
 section.page4 img {
   width: 100%;
