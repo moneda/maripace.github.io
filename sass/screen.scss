@@ -203,7 +203,7 @@ PLECA DE COLOR
       }
     }
   }
-  .contacto{ 
+  .item-contacto{ 
     border-color: #b878b1;
     a:hover{
       color: rgb(184, 120, 177);
@@ -236,21 +236,27 @@ PLECA DE COLOR
     &:hover .cover{ margin-top: -60px;}
 }
 .facebook{ 
-    background-color: #637AAE;
+    background-color: #3971b6;
     .cover{
-      background: url("../images/facebook-icon.png") no-repeat scroll center #3971b6;
+      background: url("../images/facebook-icon.png") no-repeat scroll center #d7d7d7;
     }
 }
 .twitter{
-  background-color: #a0d6e2; 
+  background-color: #6cbdda; 
   .cover {
-    background: url("../images/twitter-icon.png") no-repeat scroll center #6cbdda;}
+    background: url("../images/twitter-icon.png") no-repeat scroll center #d7d7d7;}
     iframe{
       margin: 20px 0 0 10px;
       width: 86px !important;
     }
 }
-
+.viewing-page-2,
+.viewing-page-4{
+  .twitter,
+  .facebook{
+    .cover{ background-color: #9f9f9f;}
+  }
+}
 /*------------------------
  MOBILE MENU
 --------------------------*/

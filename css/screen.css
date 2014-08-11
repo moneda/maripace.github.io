@@ -252,10 +252,10 @@ PLECA DE COLOR
 .navigation .info .submenu li a:hover {
   color: #bdeb43;
 }
-.navigation .contacto {
+.navigation .item-contacto {
   border-color: #b878b1;
 }
-.navigation .contacto a:hover {
+.navigation .item-contacto a:hover {
   color: #b878b1;
   transition: none;
 }
@@ -291,21 +291,28 @@ PLECA DE COLOR
 }
 
 .facebook {
-  background-color: #637AAE;
+  background-color: #3971b6;
 }
 .facebook .cover {
-  background: url("../images/facebook-icon.png") no-repeat scroll center #3971b6;
+  background: url("../images/facebook-icon.png") no-repeat scroll center #d7d7d7;
 }
 
 .twitter {
-  background-color: #a0d6e2;
+  background-color: #6cbdda;
 }
 .twitter .cover {
-  background: url("../images/twitter-icon.png") no-repeat scroll center #6cbdda;
+  background: url("../images/twitter-icon.png") no-repeat scroll center #d7d7d7;
 }
 .twitter iframe {
   margin: 20px 0 0 10px;
   width: 86px !important;
+}
+
+.viewing-page-2 .twitter .cover,
+.viewing-page-2 .facebook .cover,
+.viewing-page-4 .twitter .cover,
+.viewing-page-4 .facebook .cover {
+  background-color: #9f9f9f;
 }
 
 /*------------------------
